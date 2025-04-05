@@ -1,0 +1,7 @@
+public/
+  ├── images/
+  │   ├── starboy.jpg
+  │   └── demons.jpg
+  └── music/
+      ├── starboy.mp3
+      └── demons.mp3

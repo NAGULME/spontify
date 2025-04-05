@@ -1,0 +1,85 @@
+@import 'bootstrap/scss/bootstrap';
+
+// Variables
+$spotify-green: #1DB954;
+$background-dark: #121212;
+$background-darker: #000000;
+$text-primary: #FFFFFF;
+$text-secondary: #B3B3B3;
+
+// Global styles
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $background-dark;
+}
+
+// Main app container
+.app {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #282828, $background-dark);
+  color: $text-primary;
+  display: flex;
+  flex-direction: column;
+
+  .main-container {
+    flex: 1;
+    display: flex;
+    height: calc(100vh - 90px);
+    overflow: hidden;
+  }
+
+  .content-area {
+    flex: 1;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #404040 0%, $background-dark 100%);
+    padding: 24px;
+    margin-bottom: 90px;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #535353;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+}
+
+// Song list styles
+.song-list {
+  margin-top: 20px;
+
+  .song-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    transition: left 0.3s ease;
+    
+    &.show {
+      left: 0;
+    }
+  }
+}

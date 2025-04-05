@@ -1,0 +1,84 @@
+.now-playing-view {
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    
+    .close-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      padding: 8px;
+      cursor: pointer;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .artwork {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 48px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .song-details {
+    margin-bottom: 48px;
+    
+    h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    
+    h2 {
+      font-size: 18px;
+      color: #b3b3b3;
+    }
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    
+    .control-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      
+      &:hover {
+        color: #1DB954;
+      }
+      
+      &.play-btn {
+        width: 56px;
+        height: 56px;
+        background: #fff;
+        border-radius: 50%;
+        color: #000;
+        font-size: 24px;
+        
+        &:hover {
+          transform: scale(1.1);
+          background: #1DB954;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

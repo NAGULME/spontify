@@ -1,0 +1,129 @@
+.song-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2D1F1F 0%, #121212 100%);
+  color: white;
+  padding: 24px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 32px;
+
+    .back-btn {
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px;
+      &:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .song-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 32px;
+    text-align: center;
+
+    .artwork {
+      width: 100%;
+      max-width: 232px;
+      margin-bottom: 40px;
+      
+      img {
+        width: 100%;
+        aspect-ratio: 1;
+        box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .song-details {
+      .label {
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 900;
+        margin: 8px 0 24px;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .artist-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 16px 0;
+
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: #fff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .song-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        color: #a7a7a7;
+        font-size: 14px;
+        margin-top: 8px;
+
+        &::before {
+          content: "•";
+          margin: 0 4px;
+        }
+      }
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-top: 32px;
+
+      .play-button {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #1ed760;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.04);
+          background: #1fdf64;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
